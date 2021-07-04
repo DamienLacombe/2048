@@ -1,0 +1,89 @@
+.container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(#f1f1f179, rgba(241, 243, 241, 0.699), blue);
+}
+.btn {
+    text-align: center;
+    width: 10%;
+    position: relative;
+    min-height: 9vh;
+    max-height: 9vh;
+    left: 45%;
+    display: block;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: #4E4E4E;
+    font-size: 6vh;
+    display: block;
+    font-family: sans-serif;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    line-height: 9vh;
+}
+
+.btn1::before {
+    content: '';
+    border: solid transparent 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-5px, -5px);
+}
+
+.btn1::after {
+    content: '';
+    border: solid transparent 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-5px, -5px);
+}
+
+.btn1:hover::after {
+    animation: hover1 0.2s forwards linear alternate ;
+    animation-delay: 0.2s;
+}
+
+.btn1:hover::before {
+    animation: hover 0.2s forwards linear ;
+}
+
+@keyframes hover {
+    0% {
+        width: 0%;
+        height: 100%;
+        border-bottom-color: #4E4E4E;
+        border-top-color: #4E4E4E;
+    }
+
+    100% {
+        width: 100%;
+        height: 100%;
+        border-bottom-color: #4E4E4E;
+        border-top-color: #4E4E4E;
+    }
+}
+
+@keyframes hover1 {
+    0% {
+        width: 100%;
+        height: 0%;
+        border-left-color: #4E4E4E;
+        border-right-color: #4E4E4E;
+    }
+
+    100% {
+        width: 100%;
+        height: 100%;
+        border-left-color: #4E4E4E;
+        border-right-color: #4E4E4E;
+    }
+}
